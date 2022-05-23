@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: grid;
+    grid-template:
+      'header header header header' auto
+      'left-menu emails settings shortcuts' 1fr /
+      180px 1fr 180px 50px;
+  }
+  
+  /* HEADER SECTION */
+  
+  .header {
+    grid-area: header;
+  
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 3rem;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid whitesmoke;
+  }
+  
+  button {
+    background: none;
+    border: none;
+  }
+  
+  .header button span {
+    font-size: 1.2rem;
+    color: rgb(71, 71, 71);
+  }
+  
+  /* HEADER SECTION -- LEFT MENU */
+  
+  .header__left-menu {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .gmail-logo {
+      width: 60px;
+  }
+  
+  /* HEADER SECTION -- SEARCH */
+  
+  .header__search {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+  }
+  
+  .search-side {
+    background-color: #f0f3f4;
+    display: grid;
+    place-items: center;
+    padding: 5px;
+    color: rgb(142, 142, 142);
+  }
+  
+  .header__search__search-icon {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .header__search__search-icon span {
+    font-size: 1.2rem;
+  }
+  
+  .header__search__bar {
+    border: none;
+    background-color: #f0f3f4;
+    padding: 0 0.5rem;
+    font-size: 0.7rem;
+  }
+  
+  /* 
+  .header__search__bar:focus {
+    outline: none;
+  } */
+  
+  .header__search__expand {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .header__search__expand span {
+    font-size: 1.2rem;
+  }
+  
+  /* HEADER SECTION -- RIGHT MENU */
+  
+  .header__right-menu {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.3rem;
+    align-items: center;
+  }
+  
+  .header__right-menu__profile {
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+  
+  .header__right-menu__profile .container {
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    gap: 0.5rem;
+  }
+  
+  .header__right-menu__profile .name {
+    font-size: 0.8rem;
+  }
+  
+  .header__right-menu__profile img {
+    border-radius: 50%;
+  }
+  
+  /* LEFT MENU SECTION */
+  
+  .left-menu {
+    grid-area: left-menu;
+    background-color: white;
+
+    display: grid;
+    grid-template-rows: 100px 240px 100px 1fr;
+  }
+  .first-row p{
+    padding-right: 20px;
+}
+.buttons{
+    padding-left: 20px;
+    display: grid;
+    border-bottom: 1px solid #cecaca;
+    gap: 5px; 
+}
+.buttons-all{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr 30px;
+}
+.second-row{
+   margin-top: 10px;
+   padding-left: 20px;
+   padding-bottom: 100px;
+   display: grid;
+   gap: 10px;
+   border-bottom: 1px solid #cecaca; 
+}
+.buttons-all-1{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 1fr;
+}
+  
+
+
+
+  
+  
+  /* EMAILS SECTION  */
+  
+  .emails {
+    grid-area: emails;
+    padding: 1rem;
+    background-color: #ff00ff40;
+    overflow: scroll;
+    display: grid;
+    grid-gap: 4px;
+  }
+
+  .emails p{
+      border: 2px solid #ff00ff40;
+      box-shadow: 2px 2px 2px 2px rgb(179, 176, 176);
+      padding: 5px;
+  }
+
+
+  
+  /* SETTINGS SECTION  */
+  
+  .settings {
+    grid-area: settings;
+    border: 1px solid whitesmoke;
+    background-color: #0000ff40;
+    padding: 15px;
+    display: grid;
+    grid-template-rows: 30px 50px 50px;
+    gap: 15px;
+  }
+  
+  .line-1 {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 1fr 30px;
+      place-content: center;
+      font-size: 17px;
+  }
+
+  .line-2 {
+    padding-top: 10px;
+    padding-left: 30px;
+    border: 1px solid #d4d4d491;
+    box-shadow: 1px 1px 1px #d4d4d491;
+    color: rgb(5, 80, 192);
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .density{
+      margin-top: 15px;
+      font-size: 13px;
+  }
+
+  .density-icons{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 40px 40px;
+  }
+
+  .density-buttones{
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 50px auto;
+  }
+
+
+
+  /* SHORTCUTS SECTION  */
+  
+  .shortcuts {
+    grid-area: shortcuts;
+    background-color: #ffff0040;
+  }
+
+  .first-row {
+      margin-right: 90px;
+      margin-bottom: 35px;
+      margin-top: 15px;
+      margin-left: 5px;
+      border: 0px solid #fafafb;
+      border-radius: 35px;
+      box-shadow: 1px 2px 4px gray;
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 50px 1fr;
+      place-items: center;
+      font-size: 15px;
+  }
+
+.shortcuts-button {
+    margin: 5px;
+    display: grid;
+}
+
+.add-button {
+    margin: 13px;
+}
